@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="ISO-8859-1">
+    <title>Edit Book</title>
+    
+    <style>
+            
+          body
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .navbar
+        {
+            background: #fcba00;
+            padding: 10px 20px;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+         .navbar-menu {
+            position: sticky;
+            top: 0px;
+            display: flex;
+            align-items: center;
+        }
+         a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            font-size: 20px;
+        } 
+        
+        a.logo 
+        {
+            padding: 0px;
+            display: block;
+            width: max-content;
+            position: relative;
+        }
+		.nab_brand
+		{
+			height: 64px;
+    		width: 73px;
+		}
+      
+        h1
+        {
+          position: relative;
+          text-align: center;
+        }
+        
+        
+        
+        table
+        {
+         font-size: 30px;
+        }
+        #input
+        {
+         height: 35px;
+         width: 300px;
+         font-size: 20px;
+        }
+        select
+        {
+         width: 200px;
+         height: 40px; 
+        }
+        option
+        {
+         font-size: 20px;
+        }
+        #button
+        {
+         padding: 10px 20px 10px 20px;
+         margin: 2px;
+        }
+        </style>
+    
+   
+   </head>
+<body>
+
+
+    <!-- NavBar -->
+
+ 
+          <div class="navbar">
+			
+			<div class="navbar-menu">
+				<a href="/" class="logo"><img class="nab_brand" src="../images/book_store.png"></a>
+   				<a href="/">Home</a>  
+   	        	<a href="about">About Us</a>  
+   	        	<a href="/available_book">Available Books</a>  
+   	        	<a href="my_book">My Books</a>
+                <a href="book_Register">Add Books</a>
+   	        	<a href="contact">Contact</a>
+			</div>
+		</div>
+          
+          <!-- Form Tag -->
+          
+          
+          
+          <h1 align="center">Edit Book Here</h1>
+          <form th:action="@{/save}" method="post" th:object="${book}">
+           <table cellpadding="10px" align="center" >
+           <tr>
+              <td><label>Id:</label></td>
+              <td><input id="input" type="text" name="id" th:value="${book.id}"></input></td>
+            </tr>
+            <tr>
+              <td><label>Name:</label></td>
+              <td><input id="input" type="text" name="name" th:value="${book.name}"></input></td>
+            </tr>
+            <tr>
+              <td><label>Author:</label></td>
+              <td><input id="input" type="text" name="author" th:value="${book.author}"></input></td>
+            </tr>
+            <tr>
+              <td><label>Price:</label></td>
+              <td><input id="input" type="text" name="price" th:value="${book.price}"></input></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td align="center"><input id="button" type="submit"></input>
+            </tr>
+           </table>
+          </form>
+          
+          
+    </body>
+</html>

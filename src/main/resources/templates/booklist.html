@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="ISO-8859-1">
+          <title>Available Book</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <style>
+            
+            
+           body
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .navbar
+        {
+            background: #fcba00;
+            padding: 10px 20px;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+         .navbar-menu {
+            position: sticky;
+            top: 0px;
+            display: flex;
+            align-items: center;
+        }
+         a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            font-size: 20px;
+        } 
+        
+        a.logo 
+        {
+            padding: 0px;
+            display: block;
+            width: max-content;
+            position: relative;
+        }
+		.nab_brand
+		{
+			height: 64px;
+    		width: 73px;
+		} 
+      
+        h1
+        {
+          position: relative;
+          text-align: center;
+        }
+        
+        .search_section
+        {
+          position: relative;
+	      text-align: center;
+          margin: 12px;
+        }
+        
+        .search_box
+        {
+           width: 700px;
+           padding: 15px;
+           text-align: center; 
+           font-size: 18px;                 
+        }
+        
+        .search_btn
+        {
+          width: 70px;
+          height: 54px;
+        }
+         .search_btn:hover
+        {
+	       background: #fcba00; 
+        }
+        
+        
+        </style>
+          
+     </head>
+<body>
+ 
+  <!-- NavBar -->
+
+ 
+         <div class="navbar">
+   
+          <div class="navbar-menu">
+				<a href="/" class="logo"><img class="nab_brand" src="images/book_store.png"></a>
+   				<a href="/">Home</a>  
+   	        	<a href="about">About Us</a>  
+   	        	<a href="available_book">Available Books</a>  
+   	        	<a href="my_book">My Books</a>
+                <a href="book_Register">Add Books</a>
+   	        	<a href="contact">Contact</a>
+			</div>
+          </div>
+  
+             <h1>Available Book</h1>
+             
+          <div class="search_section">
+              <form action="">
+                  <input class="search_box" type="text" placeholder="Seacrch Books" name="search">
+                  <button class="search_btn" type="submit"><i class="fa fa-search"></i></button>                  
+              </form>
+          </div>
+          <div>
+               <table cellpadding="30px" align="center">
+                    <thead style="background: #fcba00">
+                         <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Action</th>
+                         </tr>
+                    </thead>
+                    <tbody style="background: #ddded9;
+                                  ">
+                            
+                            <tr th:each="b :${book}">
+                            <td th:text="${b.id}"></td>
+                            <td th:text="${b.name}"></td>
+                            <td th:text="${b.author}"></td>
+                            <td th:text="${b.price}"></td>
+                            <td align="center"><a style="color: black" th:href="@{/mylist/{id}(id=${b.id})}" >Add To MyBook</a>
+                            <a style="color: black" th:href="@{/editBook/{id}(id=${b.id})}" >Edit Book</a>
+                            <a style="color: black" th:href="@{/deleteBook/{id}(id=${b.id})}" >Delete Book</a></td>
+                         </tr>
+                       
+                    </tbody>
+               </table>
+          </div>
+  
+  
+ 
+ 
+ 
+</body>
+</html>

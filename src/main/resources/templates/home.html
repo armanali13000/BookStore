@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Book Store</title>
+		<style>
+            
+            
+            body
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .navbar
+        {
+            background: #fcba00;
+            padding: 10px 20px;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+         .navbar-menu {
+            position: sticky;
+            top: 0px;
+            display: flex;
+            align-items: center;
+        }
+         a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            font-size: 20px;
+        } 
+        
+        a.logo 
+        {
+            padding: 0px;
+            display: block;
+            width: max-content;
+            position: relative;
+        }
+		.nab_brand
+		{
+			height: 64px;
+    		width: 73px;
+		}	
+  
+       
+      
+
+       .dropbtn {
+            background-color: #385aa7;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            }
+
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #fcba00}
+
+            .dropdown:hover .dropdown-content {
+            display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+            background-color: #385aa7;
+            }
+
+
+
+
+
+
+
+
+
+
+      
+       /*  .heading
+        {
+          position: relative;
+          text-align: center;
+          background: linear-gradient(#f7b05d, #dc8246);
+          padding: 0px;
+          margin: 0px;
+        } */
+        
+        .welcome
+        {
+          height: 951px;
+        }    
+        </style>
+		
+	</head>
+	<body>
+		<!-- NavBar -->
+
+	
+		<div class="navbar">
+			
+			<div class="navbar-menu">
+				<a href="/" class="logo"><img class="nab_brand" src="images/book_store.png"></a>
+   				<a href="/">Home</a>  
+   	        	<a href="about">About Us</a>  
+   	        	<a href="available_book">Available Books</a>  
+   	        	<a href="my_book">My Books</a>
+                <a href="book_Register">Add Books</a>
+   	        	<a href="contact">Contact</a>
+			</div>
+
+
+				<div class="dropdown">
+                <button class="dropbtn">LOGIN</button>
+                <div class="dropdown-content">
+                <a href="#">Student</a>
+                <a href="#">Admin</a>
+                </div>
+              </div>
+
+			<!-- <div class="navRight">
+				<a class="LoginBtn" href="#">LOGIN</a>
+			<div class="dropdown-button">
+    			<a class="LoginBtn" href="#">Student</a>
+    			<a class="LoginBtn" href="#">Admin</a>
+			</div>
+			
+			</div> -->
+		</div>
+
+		<!-- <h1 class="heading">WELCOME TO BOOK STORE</h1> -->
+     
+         <img class="welcome" alt="image" src="images/welcome2.jpg">
+
+		
+	</body>
+</html>
